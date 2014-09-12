@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans   http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+  <bean id="processEngineConfiguration"
+    class="org.activiti.engine.impl.cfg.StandaloneProcessEngineConfiguration">
+	<!--
+	<property name="jdbcUrl" value="jdbc:h2:mem:activiti;DB_CLOSE_DELAY=1000" />
+    <property name="jdbcDriver" value="org.h2.Driver" />
+    <property name="jdbcUsername" value="sa" />
+    <property name="jdbcPassword" value="" />
+ 	-->
+ 	
+ 	<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/activiti" />
+    <property name="jdbcDriver" value="com.mysql.jdbc.Driver" />
+    <property name="jdbcUsername" value="root" />
+    <property name="jdbcPassword" value="root" />
+ 
+<!--<property name="jdbcDriver" value="${jdbc.driver}" />
+    <property name="jdbcUrl" value="${jdbc.url}" />
+    <property name="jdbcUsername" value="${jdbc.username}" />
+    <property name="jdbcPassword" value="${jdbc.password}" /> -->
+
+    <!-- Database configurations -->
+    <property name="databaseSchemaUpdate" value="drop-create" />
+
+    <!-- job executor configurations -->
+    <property name="jobExecutorActivate" value="false" />
+
+    <!-- mail server configurations -->
+    <property name="mailServerPort" value="5025" />
+    <property name="history" value="full" />
+  </bean>
+
+</beans>
