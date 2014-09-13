@@ -73,7 +73,8 @@ of testing facilities designed for use with TestNG (http://testng.org/), so it's
             <version>${tapestry-release-version}</version>
             <scope>provided</scope>
         </dependency>
-        <!-- junit -->
+        
+         <!-- junit -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -149,7 +150,7 @@ of testing facilities designed for use with TestNG (http://testng.org/), so it's
 			<type>jar</type>
 			<scope>test</scope>
 		</dependency>
-		
+
     </dependencies>
     <build>
         <finalName>ares-activiti</finalName>
@@ -200,7 +201,7 @@ of testing facilities designed for use with TestNG (http://testng.org/), so it's
     </build>
 
     <reporting/>
-    <!-- 第三方构件仓库 -->
+ 	<!-- 第三方构件仓库 -->
     <repositories>
 
         <!-- This repository is only needed when the Tapestry version is a preview release, rather

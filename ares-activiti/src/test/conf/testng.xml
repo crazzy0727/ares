@@ -2,7 +2,7 @@
 <suite name="ares-activiti Application Test Suite" annotations="1.5">
     <test name="Unit Tests">
         <packages>
-            <package name="org.ares"/>
+            <package name="org.ares.activiti"/>
         </packages>
     </test>
 </suite>
