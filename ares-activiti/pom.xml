@@ -126,6 +126,31 @@ of testing facilities designed for use with TestNG (http://testng.org/), so it's
 			<artifactId>activiti-modeler</artifactId>
 			<version>${activiti.version}</version>
 		</dependency>
+		
+		<!--  Hibernate -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>${hibernate.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>xml-apis</groupId>
+					<artifactId>xml-apis</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-ehcache</artifactId>
+			<version>${hibernate.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>net.sf.ehcache</groupId>
+					<artifactId>ehcache-core</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		
 		<!-- c3p0：本身的0.9.1处理clob字段有bug -->
 		<dependency>
 			<groupId>com.mchange</groupId>
@@ -237,5 +262,7 @@ of testing facilities designed for use with TestNG (http://testng.org/), so it's
 		<c3p0.version>0.9.5-pre1</c3p0.version>
 		<junit.version>4.11</junit.version>
         <oracle.version>11g</oracle.version>
+        <hibernate.version>4.3.6.Final</hibernate.version>
+    	<hibernate-validator.version>5.1.2.Final</hibernate-validator.version>
     </properties>
 </project>
